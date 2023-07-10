@@ -1,15 +1,15 @@
-codigo,nome,preco
+codigo,nome,valor
 1,Pao,10.00
 2,Chocolate,5.00
 3,Shampoo,7.50
 4,Leite,3.50
-5,Café,8.00
+5,Cafe,8.00
 6,Banana,2.00
 7,Arroz,6.50
-8,Feijão,4.00
+8,Feijao,4.00
 9,Queijo,9.50
 10,Iogurte,3.00
-11,Macarrão,5.50
+11,Macarrao,5.50
 12,Biscoito,2.50
 13,Refrigerante,4.50
 14,Sabonete,1.50
@@ -23,9 +23,9 @@ codigo,nome,preco
 22,Peixe,7.00
 23,Carne,12.00
 24,Fraldas,15.00
-25,Papel higiênico,6.00
+25,Papel higienico,6.00
 26,Amaciante,8.50
 27,Desinfetante,3.50
 28,Pizza,10.50
-29,Hambúrguer,7.00
+29,Hamburguer,7.00
 30,Sorvete,6.50

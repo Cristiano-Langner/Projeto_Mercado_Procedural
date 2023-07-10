@@ -4,16 +4,16 @@ import csv
 def carregar_produtos(arquivo):
     produtos_estoque = {}
     with open(arquivo, "r", newline="") as f:
-        reader = csv.DictReader(f, delimiter="")
+        reader = csv.DictReader(f, delimiter=",")
         for linha in reader:
-            codigo = linha("codigo")
-            nome = linha("nome")
-            valor = float(linha("valor"))
+            codigo = linha["codigo"]
+            nome = linha["nome"]
+            valor = float(linha["valor"])
             produtos_estoque[codigo] = {"nome": nome, "valor": valor}
     return produtos_estoque
 
 #Função para listar os produtos do carrinho.
-def listar_carrinho(produtos):
+def listar_produtos(produtos):
     print("==== PRODUTOS ====")
     print("Código, Nome, Preço")
     for codigo, info in produtos.items():
