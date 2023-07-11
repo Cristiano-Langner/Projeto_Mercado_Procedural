@@ -11,9 +11,10 @@ def main():
     while True:
         try:
             print("1. Comprar produtos")
-            print("2. Concluir compra")
-            print("3. Sair")
-            opcao = int(input("Escolha uma opção: "))
+            print("2. Ver carrinho")
+            print("3. Concluir compra")
+            print("4. Sair")
+            opcao = int(input("\nEscolha uma opção: "))
             
             if opcao == 1:
                 listar_produtos(produtos)
@@ -24,8 +25,10 @@ def main():
                 else:
                     raise ValueError("O produto está fora de estoque!\n")
             elif opcao == 2:
-                break
+                carrinho_compras.mostrar_carrinho()
             elif opcao == 3:
+                print("Total da compra: R$", carrinho_compras.calcular_total(produtos))
+            elif opcao == 4:
                 print("Compra cancelada. Saindo do sistema...")
                 break
             else:

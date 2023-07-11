@@ -14,3 +14,19 @@ class Carrinho_compras:
                 raise ValueError("A quantidade deve ser maior que zero!\n")
         else:
             raise ValueError("O produto está fora de estoque!\n")
+        
+    def mostrar_carrinho(self):
+        print("\n=== Carrinho ===")
+        for codigo, quantidade in self.produtos_carrinho.items():
+            print(f'Código: {codigo} Quantidade: {quantidade}')
+        print("\n")
+        
+    def calcular_total(self, produtos):
+        total = 0
+        for codigo, quantidade in self.produtos_carrinho.items():
+            nome = produtos[codigo]["nome"]
+            valor = produtos[codigo]["valor"]
+            subtotal = valor * quantidade
+            total += subtotal
+            print(f"{nome} - Quantidade: {quantidade} - Subtotal: R${subtotal:.2f}")
+        return total
