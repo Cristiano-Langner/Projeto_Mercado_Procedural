@@ -10,9 +10,10 @@ def carregar_produtos(arquivo):
             nome = linha["nome"]
             valor = float(linha["valor"])
             produtos_estoque[codigo] = {"nome": nome, "valor": valor}
-    return produtos_estoque
+    tamanho_estoque = len(produtos_estoque)
+    return produtos_estoque, tamanho_estoque
 
-#Função para listar os produtos do carrinho.
+#Função para mostrar os produtos do carrinho.
 def listar_produtos(produtos):
     print("==== PRODUTOS ====")
     print("Código, Nome, Preço")
