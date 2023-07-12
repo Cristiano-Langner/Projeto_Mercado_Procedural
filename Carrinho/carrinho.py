@@ -15,10 +15,12 @@ class Carrinho_compras:
         else:
             raise ValueError("O produto está fora de estoque!\n")
         
-    def mostrar_carrinho(self):
-        print("\n=== Carrinho ===")
+    def mostrar_carrinho(self, produtos):
+        print("\n=== Carrinho de compras ===")
         for codigo, quantidade in self.produtos_carrinho.items():
-            print(f'Código: {codigo} Quantidade: {quantidade}')
+            nome = produtos[codigo]["nome"]
+            valor = produtos[codigo]["valor"]
+            print(f'Produto: {nome} - Quantidade: {quantidade} - Valor unidade: R${valor}')
         print("\n")
         
     def calcular_total(self, produtos):
