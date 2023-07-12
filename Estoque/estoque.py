@@ -15,7 +15,7 @@ def carregar_produtos(arquivo):
 
 #Função para mostrar os produtos do carrinho.
 def listar_produtos(produtos):
-    print("==== PRODUTOS ====")
+    print("====== PRODUTOS ======\n")
     print("Código, Nome, Preço")
     for codigo, info in produtos.items():
         nome = info["nome"]
