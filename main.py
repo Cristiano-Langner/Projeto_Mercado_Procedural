@@ -8,8 +8,7 @@ def main():
     print(f"=== No momento contamos com uma variedade de {tamanho_estoque} itens em nosso estoque ===\n")
     listar_produtos(produtos)
     continuar = True
-    
-    continuar = opcoes(continuar)
+    opcoes(continuar)
             
 if __name__ == "__main__":
     main()

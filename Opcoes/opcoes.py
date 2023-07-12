@@ -32,6 +32,8 @@ def opcoes(continuar):
                 print("Total da compra: R$", carrinho_compras.calcular_total(produtos))
                 print("\n")
                 pagamento = forma_pagamento(produtos)
+                carrinho_compras.nota_fiscal(produtos, "Nota_Fiscal.csv", pagamento)
+                return False
                 
             elif opcao == 4:
                 print("Compra cancelada. Saindo do sistema...")
