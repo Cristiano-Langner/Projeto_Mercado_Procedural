@@ -35,7 +35,11 @@ def opcoes(continuar):
                     print("\n")
                     pagamento = forma_pagamento(produtos)
                     carrinho_compras.nota_fiscal(produtos, "Nota_Fiscal.csv", pagamento) #Gera a nota fiscal da compra
-                    return False
+                    nova_compra = input("\nSe deseja realizar outra compra tecle letra 'y': ")
+                    if nova_compra == "Y" or nova_compra == "y": #Verifica se quer comprar novamente
+                        pass
+                    else:
+                        return False
                 else:
                     print("O carrinho está vazio! Por favor selecione os produtos desejados.")
                 
