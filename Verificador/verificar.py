@@ -1,5 +1,5 @@
 def verifica_opcao(opcao):
-    if opcao < 1 or opcao > 4:
+    if opcao < 1 or opcao > 4: # Verifica se a opção está fora do intervalo válido (1 a 4)
         raise ValueError("Escolha uma das opções disponíveis!\n")
     
 def forma_pagamento(self):
@@ -17,4 +17,4 @@ def forma_pagamento(self):
         print("Pagamento no dinheiro selecionado.")
         print("Adicionado desconto de 5%!")
         print("Imprimindo NF...\n")
-    return pagamento
+    return pagamento # Retorna a opção de pagamento escolhida
